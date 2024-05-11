@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dbhq3lmluhjjj"]
+[gd_scene load_steps=14 format=3 uid="uid://dbhq3lmluhjjj"]
 
 [ext_resource type="PackedScene" uid="uid://clf8j5uy7wttx" path="res://scenes/player.tscn" id="1_gjhmf"]
 [ext_resource type="Texture2D" uid="uid://cfcjwg8kr30n0" path="res://assets/sprites/world_tileset.png" id="2_gwp1l"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://rxbol4eb8ry0" path="res://scenes/coin.tscn" id="4_mxhsj"]
 [ext_resource type="PackedScene" uid="uid://b3y800n0vchus" path="res://scenes/kill_zone.tscn" id="5_5s2iv"]
 [ext_resource type="PackedScene" uid="uid://jrextcfvwqpe" path="res://scenes/Slime.tscn" id="6_dd0nt"]
+[ext_resource type="FontFile" uid="uid://84570hto6y5x" path="res://assets/fonts/PixelOperator8.ttf" id="7_64gml"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0cjc"]
 texture = ExtResource("2_gwp1l")
@@ -477,7 +478,7 @@ autoplay = "move_left_right_loop"
 
 [node name="Player" parent="." instance=ExtResource("1_gjhmf")]
 z_index = 5
-position = Vector2(23, -81)
+position = Vector2(-10, 10)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -8)
@@ -523,3 +524,48 @@ position = Vector2(631, -185)
 
 [node name="Slime" parent="." instance=ExtResource("6_dd0nt")]
 position = Vector2(620, 32)
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = -117.0
+offset_right = 55.0
+offset_bottom = 23.0
+scale = Vector2(0.485603, 0.643205)
+theme_override_colors/font_color = Color(0.0117189, 0.148989, 0.348791, 1)
+theme_override_fonts/font = ExtResource("7_64gml")
+theme_override_font_sizes/font_size = 16
+text = "Space to Jump"
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 368.0
+offset_top = 25.0
+offset_right = 540.0
+offset_bottom = 48.0
+scale = Vector2(0.485603, 0.643205)
+theme_override_colors/font_color = Color(0.0117189, 0.148989, 0.348791, 1)
+theme_override_fonts/font = ExtResource("7_64gml")
+theme_override_font_sizes/font_size = 16
+text = "Falling Kills"
+
+[node name="Label4" type="Label" parent="Labels"]
+offset_left = 547.0
+offset_top = -42.0
+offset_right = 851.0
+offset_bottom = -19.0
+scale = Vector2(0.485603, 0.643205)
+theme_override_colors/font_color = Color(0.0117189, 0.148989, 0.348791, 1)
+theme_override_fonts/font = ExtResource("7_64gml")
+theme_override_font_sizes/font_size = 16
+text = "Beware of Slime Monster"
+
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = 779.0
+offset_top = -154.0
+offset_right = 969.0
+offset_bottom = -131.0
+scale = Vector2(0.485603, 0.643205)
+theme_override_colors/font_color = Color(0.0977035, 0.313619, 0.753292, 1)
+theme_override_fonts/font = ExtResource("7_64gml")
+theme_override_font_sizes/font_size = 16
+text = "Almost There..."
